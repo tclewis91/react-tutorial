@@ -2,15 +2,26 @@
 <html>
   <head>
     <title>Hello React</title>
-    <!-- Not present in the tutorial. Just for basic styling. -->
-    <link rel="stylesheet" href="css/base.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
   </head>
   <body>
     <div id="content"></div>
-    <script type="text/jsx;harmony=true" src="scripts/example.js"></script>
+    <script type="text/jsx">
+     var CommentBox = React.createClass({
+      render: function() {
+        return (
+          <div className="CommentBox">
+            Sup world! I am a comment box.
+          </div>
+          );
+      }
+     });
+     React.render(
+      <CommentBox />,
+      document.getElementById('content')
+    );
+    </script>
   </body>
 </html>
